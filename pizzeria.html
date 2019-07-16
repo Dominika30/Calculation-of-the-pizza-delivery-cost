@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Pizzeria Margherita</title>
+</head>
+<body>
+	<h3>Oblicz koszt dostawy</h3><br/>
+	<input type="checkbox" id="zzielonej"/><br/>
+	Jestem z Zielonej Góry
+	<p>albo</p><br/>
+	Podaj liczbę kilometrów od Zielonej Góry:<input type="number" id="kilometry"/><br/>
+	<input type="button" value="Oblicz" onClick="oblicz()"/>
+	<p id ="wynik"></p>
+	
+	<script type="text/javascript">
+	function oblicz()
+	{
+	var a = document.getElementById('kilometry').value;
+	var b = document.getElementById('zzielonej').checked;
+	if(b==true)
+	{
+	document.getElementById('wynik').innerHTML = "Dowieziemy Twoją pizzę za darmo";
+	}
+	else
+	{
+	var y=a*1;
+	var x=y*1;
+	document.getElementById('wynik').innerHTML = "Dowóz będzie Cie kosztował:" +(x+y);	
+	} 
+	}
+	</script>
+	
+</body>
+</html>
